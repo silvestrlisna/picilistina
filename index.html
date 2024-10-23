@@ -8,8 +8,8 @@
       body {
         font-family: Tahoma, sans-serif;
         font-weight: bold;
-        margin: 20px;
-        padding: 20px;
+        margin: 10px; /* Reduced margin */
+        padding: 10px; /* Reduced padding */
         background-color: #007bff;
         color: black;
       }
@@ -18,26 +18,27 @@
         text-align: center;
       }
       .button {
-        padding: 10px 20px; /* Increased padding for bigger buttons */
-        margin: 5px;
-        font-size: 16px; /* Increased font size */
+        padding: 8px 12px; /* Adjusted padding */
+        margin: 5px 0; /* Adjusted margin for vertical spacing */
+        font-size: 14px; /* Slightly smaller font size */
         background-color: white;
         color: black;
         border: 2px solid #fff;
         border-radius: 5px;
         cursor: pointer;
         transition: background-color 0.3s, color 0.3s;
-        display: inline-block;
+        display: block; /* Made buttons block elements for single column */
+        width: 100%; /* Full width for buttons */
       }
       .button.selected {
         background-color: green;
         color: white;
       }
       .big-button {
-        padding: 15px 30px; /* Increased padding for the big button */
-        font-size: 16px; /* Increased font size */
+        padding: 10px; /* Adjusted padding */
+        font-size: 14px; /* Adjusted font size */
         display: block;
-        margin: 20px auto;
+        margin: 10px auto; /* Center with reduced margin */
       }
   </style>
 </head>
