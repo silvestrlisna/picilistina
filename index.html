@@ -1,563 +1,480 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="en">
+
 <head>
-	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-	<title></title>
-	<meta name="generator" content="LibreOffice 24.2.0.3 (MacOSX)"/>
-	<meta name="created" content="2024-10-23T21:11:32.891280231"/>
-	<meta name="changed" content="2024-10-23T21:11:50.063942228"/>
-	<style type="text/css">
-		@page { size: 21cm 29.7cm; margin: 2cm }
-		p { line-height: 115%; margin-bottom: 0.25cm; background: transparent }
-	</style>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Picí výkony na Líšné</title>
+
+<style>
+
+body {
+
+font-family: Tahoma, sans-serif; /* Change to Tahoma */
+
+font-weight: bold; /* Set font to bold */
+
+margin: 20px;
+
+padding: 20px;
+
+background-color: #007bff; /* Blue background color */
+
+color: black; /* Change all text color to black */
+
+}
+
+h1 {
+
+color: black; /* Black color for the heading */
+
+text-align: center; /* Center the heading */
+
+}
+
+.button {
+
+padding: 10px 20px;
+
+margin: 5px;
+
+font-size: 16px; /* Larger text size for buttons */
+
+background-color: white;
+
+color: black; /* Keep button text black */
+
+border: 2px solid #fff; /* White border for buttons */
+
+border-radius: 5px; /* Slightly rounded corners */
+
+cursor: pointer;
+
+transition: background-color 0.3s, color 0.3s;
+
+display: inline-block; /* Inline-block to help with layout */
+
+}
+
+.button.selected {
+
+background-color: green;
+
+color: white; /* White text for selected button */
+
+}
+
+.big-button {
+
+padding: 15px 30px;
+
+font-size: 16px;
+
+display: block; /* Make the button a block element */
+
+margin: 20px auto; /* Center the button */
+
+}
+
+.results {
+
+display: none; /* Hide results by default */
+
+margin-top: 20px;
+
+border: 1px solid #ccc;
+
+background-color: rgba(255, 255, 255, 0.8); /* Light background for results */
+
+color: black; /* Ensure results text is black */
+
+padding: 10px;
+
+border-radius: 5px; /* Rounded corners for results box */
+
+}
+
+table {
+
+width: 100%;
+
+border-collapse: collapse; /* Collapse borders for a cleaner look */
+
+margin-top: 10px;
+
+}
+
+th, td {
+
+border: 1px solid #ccc; /* Border for table cells */
+
+padding: 8px; /* Padding for table cells */
+
+text-align: left; /* Align text to the left */
+
+}
+
+th {
+
+background-color: #f2f2f2; /* Light gray background for headers */
+
+}
+
+/* Flexbox for button layout */
+
+.button-container {
+
+display: flex;
+
+flex-wrap: wrap; /* Allow wrapping of buttons */
+
+justify-content: center; /* Center buttons */
+
+}
+
+</style>
+
 </head>
-<body lang="cs-CZ" link="#000080" vlink="#800000" dir="ltr"><p style="line-height: 100%; margin-bottom: 0cm">
-<span style="background: #fffffe"><font color="#808080">&lt;!DOCTYPE</font><font color="#ff0000">
-html</font><font color="#808080">&gt;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#383838">&lt;</font><font color="#800000">html</font><font color="#000000">
-</font><font color="#ff0000">lang</font><font color="#383838">=</font><font color="#0000ff">&quot;en&quot;</font><font color="#383838">&gt;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#383838">&lt;</font><font color="#800000">head</font><font color="#383838">&gt;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#383838">&lt;</font><font color="#800000">meta</font><font color="#000000">
-</font><font color="#ff0000">charset</font><font color="#383838">=</font><font color="#0000ff">&quot;UTF-8&quot;</font><font color="#383838">&gt;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#383838">&lt;</font><font color="#800000">meta</font><font color="#000000">
-</font><font color="#ff0000">name</font><font color="#383838">=</font><font color="#0000ff">&quot;viewport&quot;</font><font color="#000000">
-</font><font color="#ff0000">content</font><font color="#383838">=</font><font color="#0000ff">&quot;width=device-width,
-initial-scale=1.0&quot;</font><font color="#383838">&gt;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#383838">&lt;</font><font color="#800000">title</font><font color="#383838">&gt;</font><font color="#000000">Picí
-výkony na Líšné</font><font color="#383838">&lt;/</font><font color="#800000">title</font><font color="#383838">&gt;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#383838">&lt;</font><font color="#800000">style</font><font color="#383838">&gt;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#800000">body</font><font color="#000000">
-{</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#ff0000">font-family:</font><font color="#000000">
-</font><font color="#0451a5">Tahoma</font><font color="#000000">,
-</font><font color="#0451a5">sans-serif</font><font color="#000000">;
-</font><font color="#008000">/* Change to Tahoma */</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#ff0000">font-weight:</font><font color="#000000">
-</font><font color="#0451a5">bold</font><font color="#000000">; </font><font color="#008000">/*
-Set font to bold */</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#ff0000">margin:</font><font color="#000000">
-</font><font color="#098658">20px</font><font color="#000000">;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#ff0000">padding:</font><font color="#000000">
-</font><font color="#098658">20px</font><font color="#000000">;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#ff0000">background-color:</font><font color="#000000">
-</font><font color="#0451a5">#007bff</font><font color="#000000">; </font><font color="#008000">/*
-Blue background color */</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#ff0000">color:</font><font color="#000000">
-</font><font color="#0451a5">black</font><font color="#000000">; </font><font color="#008000">/*
-Change all text color to black */</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><font color="#000000"><span style="background: #fffffe">}</span></font></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#800000">h1</font><font color="#000000">
-{</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#ff0000">color:</font><font color="#000000">
-</font><font color="#0451a5">black</font><font color="#000000">; </font><font color="#008000">/*
-Black color for the heading */</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#ff0000">text-align:</font><font color="#000000">
-</font><font color="#0451a5">center</font><font color="#000000">; </font><font color="#008000">/*
-Center the heading */</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><font color="#000000"><span style="background: #fffffe">}</span></font></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#800000">.button</font><font color="#000000">
-{</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#ff0000">padding:</font><font color="#000000">
-</font><font color="#098658">10px</font><font color="#000000"> </font><font color="#098658">20px</font><font color="#000000">;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#ff0000">margin:</font><font color="#000000">
-</font><font color="#098658">5px</font><font color="#000000">;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#ff0000">font-size:</font><font color="#000000">
-</font><font color="#098658">16px</font><font color="#000000">; </font><font color="#008000">/*
-Larger text size for buttons */</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#ff0000">background-color:</font><font color="#000000">
-</font><font color="#0451a5">white</font><font color="#000000">;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#ff0000">color:</font><font color="#000000">
-</font><font color="#0451a5">black</font><font color="#000000">; </font><font color="#008000">/*
-Keep button text black */</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#ff0000">border:</font><font color="#000000">
-</font><font color="#098658">2px</font><font color="#000000"> </font><font color="#0451a5">solid</font><font color="#000000">
-</font><font color="#0451a5">#fff</font><font color="#000000">; </font><font color="#008000">/*
-White border for buttons */</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#ff0000">border-radius:</font><font color="#000000">
-</font><font color="#098658">5px</font><font color="#000000">; </font><font color="#008000">/*
-Slightly rounded corners */</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#ff0000">cursor:</font><font color="#000000">
-</font><font color="#0451a5">pointer</font><font color="#000000">;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#ff0000">transition:</font><font color="#000000">
-</font><font color="#0451a5">background-color</font><font color="#000000">
-</font><font color="#098658">0.3s</font><font color="#000000">, </font><font color="#0451a5">color</font><font color="#000000">
-</font><font color="#098658">0.3s</font><font color="#000000">;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#ff0000">display:</font><font color="#000000">
-</font><font color="#0451a5">inline-block</font><font color="#000000">;
-</font><font color="#008000">/* Inline-block to help with layout */</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><font color="#000000"><span style="background: #fffffe">}</span></font></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#800000">.button.selected</font><font color="#000000">
-{</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#ff0000">background-color:</font><font color="#000000">
-</font><font color="#0451a5">green</font><font color="#000000">;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#ff0000">color:</font><font color="#000000">
-</font><font color="#0451a5">white</font><font color="#000000">; </font><font color="#008000">/*
-White text for selected button */</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><font color="#000000"><span style="background: #fffffe">}</span></font></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#800000">.big-button</font><font color="#000000">
-{</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#ff0000">padding:</font><font color="#000000">
-</font><font color="#098658">15px</font><font color="#000000"> </font><font color="#098658">30px</font><font color="#000000">;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#ff0000">font-size:</font><font color="#000000">
-</font><font color="#098658">16px</font><font color="#000000">;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#ff0000">display:</font><font color="#000000">
-</font><font color="#0451a5">block</font><font color="#000000">; </font><font color="#008000">/*
-Make the button a block element */</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#ff0000">margin:</font><font color="#000000">
-</font><font color="#098658">20px</font><font color="#000000"> </font><font color="#0451a5">auto</font><font color="#000000">;
-</font><font color="#008000">/* Center the button */</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><font color="#000000"><span style="background: #fffffe">}</span></font></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#800000">.results</font><font color="#000000">
-{</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#ff0000">display:</font><font color="#000000">
-</font><font color="#0451a5">none</font><font color="#000000">; </font><font color="#008000">/*
-Hide results by default */</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#ff0000">margin-top:</font><font color="#000000">
-</font><font color="#098658">20px</font><font color="#000000">;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#ff0000">border:</font><font color="#000000">
-</font><font color="#098658">1px</font><font color="#000000"> </font><font color="#0451a5">solid</font><font color="#000000">
-</font><font color="#0451a5">#ccc</font><font color="#000000">;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#ff0000">background-color:</font><font color="#000000">
-</font><font color="#0451a5">rgba(</font><font color="#098658">255</font><font color="#000000">,
-</font><font color="#098658">255</font><font color="#000000">, </font><font color="#098658">255</font><font color="#000000">,
-</font><font color="#098658">0.8</font><font color="#0451a5">)</font><font color="#000000">;
-</font><font color="#008000">/* Light background for results */</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#ff0000">color:</font><font color="#000000">
-</font><font color="#0451a5">black</font><font color="#000000">; </font><font color="#008000">/*
-Ensure results text is black */</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#ff0000">padding:</font><font color="#000000">
-</font><font color="#098658">10px</font><font color="#000000">;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#ff0000">border-radius:</font><font color="#000000">
-</font><font color="#098658">5px</font><font color="#000000">; </font><font color="#008000">/*
-Rounded corners for results box */</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><font color="#000000"><span style="background: #fffffe">}</span></font></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#800000">table</font><font color="#000000">
-{</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#ff0000">width:</font><font color="#000000">
-</font><font color="#098658">100%</font><font color="#000000">;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#ff0000">border-collapse:</font><font color="#000000">
-</font><font color="#0451a5">collapse</font><font color="#000000">;
-</font><font color="#008000">/* Collapse borders for a cleaner look
-*/</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#ff0000">margin-top:</font><font color="#000000">
-</font><font color="#098658">10px</font><font color="#000000">;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><font color="#000000"><span style="background: #fffffe">}</span></font></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#800000">th</font><font color="#000000">,
-</font><font color="#800000">td</font><font color="#000000"> {</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#ff0000">border:</font><font color="#000000">
-</font><font color="#098658">1px</font><font color="#000000"> </font><font color="#0451a5">solid</font><font color="#000000">
-</font><font color="#0451a5">#ccc</font><font color="#000000">; </font><font color="#008000">/*
-Border for table cells */</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#ff0000">padding:</font><font color="#000000">
-</font><font color="#098658">8px</font><font color="#000000">; </font><font color="#008000">/*
-Padding for table cells */</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#ff0000">text-align:</font><font color="#000000">
-</font><font color="#0451a5">left</font><font color="#000000">; </font><font color="#008000">/*
-Align text to the left */</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><font color="#000000"><span style="background: #fffffe">}</span></font></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#800000">th</font><font color="#000000">
-{</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#ff0000">background-color:</font><font color="#000000">
-</font><font color="#0451a5">#f2f2f2</font><font color="#000000">; </font><font color="#008000">/*
-Light gray background for headers */</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><font color="#000000"><span style="background: #fffffe">}</span></font></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><font color="#008000"><span style="background: #fffffe">/*
-Flexbox for button layout */</span></font></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#800000">.button-container</font><font color="#000000">
-{</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#ff0000">display:</font><font color="#000000">
-</font><font color="#0451a5">flex</font><font color="#000000">;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#ff0000">flex-wrap:</font><font color="#000000">
-</font><font color="#0451a5">wrap</font><font color="#000000">; </font><font color="#008000">/*
-Allow wrapping of buttons */</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#ff0000">justify-content:</font><font color="#000000">
-</font><font color="#0451a5">center</font><font color="#000000">; </font><font color="#008000">/*
-Center buttons */</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><font color="#000000"><span style="background: #fffffe">}</span></font></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#383838">&lt;/</font><font color="#800000">style</font><font color="#383838">&gt;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#383838">&lt;/</font><font color="#800000">head</font><font color="#383838">&gt;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#383838">&lt;</font><font color="#800000">body</font><font color="#383838">&gt;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#383838">&lt;</font><font color="#800000">h1</font><font color="#383838">&gt;</font><font color="#000000">Picí
-výkony na Líšné</font><font color="#383838">&lt;/</font><font color="#800000">h1</font><font color="#383838">&gt;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><br/>
 
-</p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#383838">&lt;</font><font color="#800000">div</font><font color="#383838">&gt;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#383838">&lt;</font><font color="#800000">h2</font><font color="#383838">&gt;</font><font color="#000000">Vyber
-osobu</font><font color="#383838">&lt;/</font><font color="#800000">h2</font><font color="#383838">&gt;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#383838">&lt;</font><font color="#800000">div</font><font color="#000000">
-</font><font color="#ff0000">class</font><font color="#383838">=</font><font color="#0000ff">&quot;button-container&quot;</font><font color="#383838">&gt;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#383838">&lt;</font><font color="#800000">button</font><font color="#000000">
-</font><font color="#ff0000">class</font><font color="#383838">=</font><font color="#0000ff">&quot;button&quot;</font><font color="#000000">
-</font><font color="#ff0000">onclick</font><font color="#383838">=</font><font color="#0000ff">&quot;selectPerson('Hloža',
-this)&quot;</font><font color="#383838">&gt;</font><font color="#000000">Hloža</font><font color="#383838">&lt;/</font><font color="#800000">button</font><font color="#383838">&gt;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#383838">&lt;</font><font color="#800000">button</font><font color="#000000">
-</font><font color="#ff0000">class</font><font color="#383838">=</font><font color="#0000ff">&quot;button&quot;</font><font color="#000000">
-</font><font color="#ff0000">onclick</font><font color="#383838">=</font><font color="#0000ff">&quot;selectPerson('Terez',
-this)&quot;</font><font color="#383838">&gt;</font><font color="#000000">Terez</font><font color="#383838">&lt;/</font><font color="#800000">button</font><font color="#383838">&gt;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#383838">&lt;</font><font color="#800000">button</font><font color="#000000">
-</font><font color="#ff0000">class</font><font color="#383838">=</font><font color="#0000ff">&quot;button&quot;</font><font color="#000000">
-</font><font color="#ff0000">onclick</font><font color="#383838">=</font><font color="#0000ff">&quot;selectPerson('Derek',
-this)&quot;</font><font color="#383838">&gt;</font><font color="#000000">Derek</font><font color="#383838">&lt;/</font><font color="#800000">button</font><font color="#383838">&gt;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#383838">&lt;</font><font color="#800000">button</font><font color="#000000">
-</font><font color="#ff0000">class</font><font color="#383838">=</font><font color="#0000ff">&quot;button&quot;</font><font color="#000000">
-</font><font color="#ff0000">onclick</font><font color="#383838">=</font><font color="#0000ff">&quot;selectPerson('Zuzka
-M.', this)&quot;</font><font color="#383838">&gt;</font><font color="#000000">Zuzka
-M.</font><font color="#383838">&lt;/</font><font color="#800000">button</font><font color="#383838">&gt;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#383838">&lt;</font><font color="#800000">button</font><font color="#000000">
-</font><font color="#ff0000">class</font><font color="#383838">=</font><font color="#0000ff">&quot;button&quot;</font><font color="#000000">
-</font><font color="#ff0000">onclick</font><font color="#383838">=</font><font color="#0000ff">&quot;selectPerson('Páca',
-this)&quot;</font><font color="#383838">&gt;</font><font color="#000000">Páca</font><font color="#383838">&lt;/</font><font color="#800000">button</font><font color="#383838">&gt;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#383838">&lt;</font><font color="#800000">button</font><font color="#000000">
-</font><font color="#ff0000">class</font><font color="#383838">=</font><font color="#0000ff">&quot;button&quot;</font><font color="#000000">
-</font><font color="#ff0000">onclick</font><font color="#383838">=</font><font color="#0000ff">&quot;selectPerson('Zorka',
-this)&quot;</font><font color="#383838">&gt;</font><font color="#000000">Zorka</font><font color="#383838">&lt;/</font><font color="#800000">button</font><font color="#383838">&gt;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#383838">&lt;</font><font color="#800000">button</font><font color="#000000">
-</font><font color="#ff0000">class</font><font color="#383838">=</font><font color="#0000ff">&quot;button&quot;</font><font color="#000000">
-</font><font color="#ff0000">onclick</font><font color="#383838">=</font><font color="#0000ff">&quot;selectPerson('Lůca',
-this)&quot;</font><font color="#383838">&gt;</font><font color="#000000">Lůca</font><font color="#383838">&lt;/</font><font color="#800000">button</font><font color="#383838">&gt;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#383838">&lt;</font><font color="#800000">button</font><font color="#000000">
-</font><font color="#ff0000">class</font><font color="#383838">=</font><font color="#0000ff">&quot;button&quot;</font><font color="#000000">
-</font><font color="#ff0000">onclick</font><font color="#383838">=</font><font color="#0000ff">&quot;selectPerson('Vojta',
-this)&quot;</font><font color="#383838">&gt;</font><font color="#000000">Vojta</font><font color="#383838">&lt;/</font><font color="#800000">button</font><font color="#383838">&gt;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#383838">&lt;</font><font color="#800000">button</font><font color="#000000">
-</font><font color="#ff0000">class</font><font color="#383838">=</font><font color="#0000ff">&quot;button&quot;</font><font color="#000000">
-</font><font color="#ff0000">onclick</font><font color="#383838">=</font><font color="#0000ff">&quot;selectPerson('Zuzka
-B.', this)&quot;</font><font color="#383838">&gt;</font><font color="#000000">Zuzka
-B.</font><font color="#383838">&lt;/</font><font color="#800000">button</font><font color="#383838">&gt;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#383838">&lt;</font><font color="#800000">button</font><font color="#000000">
-</font><font color="#ff0000">class</font><font color="#383838">=</font><font color="#0000ff">&quot;button&quot;</font><font color="#000000">
-</font><font color="#ff0000">onclick</font><font color="#383838">=</font><font color="#0000ff">&quot;selectPerson('Marek',
-this)&quot;</font><font color="#383838">&gt;</font><font color="#000000">Marek</font><font color="#383838">&lt;/</font><font color="#800000">button</font><font color="#383838">&gt;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#383838">&lt;</font><font color="#800000">button</font><font color="#000000">
-</font><font color="#ff0000">class</font><font color="#383838">=</font><font color="#0000ff">&quot;button&quot;</font><font color="#000000">
-</font><font color="#ff0000">onclick</font><font color="#383838">=</font><font color="#0000ff">&quot;selectPerson('Barča',
-this)&quot;</font><font color="#383838">&gt;</font><font color="#000000">Barča</font><font color="#383838">&lt;/</font><font color="#800000">button</font><font color="#383838">&gt;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#383838">&lt;</font><font color="#800000">button</font><font color="#000000">
-</font><font color="#ff0000">class</font><font color="#383838">=</font><font color="#0000ff">&quot;button&quot;</font><font color="#000000">
-</font><font color="#ff0000">onclick</font><font color="#383838">=</font><font color="#0000ff">&quot;selectPerson('Nikča',
-this)&quot;</font><font color="#383838">&gt;</font><font color="#000000">Nikča</font><font color="#383838">&lt;/</font><font color="#800000">button</font><font color="#383838">&gt;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#383838">&lt;</font><font color="#800000">button</font><font color="#000000">
-</font><font color="#ff0000">class</font><font color="#383838">=</font><font color="#0000ff">&quot;button&quot;</font><font color="#000000">
-</font><font color="#ff0000">onclick</font><font color="#383838">=</font><font color="#0000ff">&quot;selectPerson('Lenka',
-this)&quot;</font><font color="#383838">&gt;</font><font color="#000000">Lenka</font><font color="#383838">&lt;/</font><font color="#800000">button</font><font color="#383838">&gt;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#383838">&lt;</font><font color="#800000">button</font><font color="#000000">
-</font><font color="#ff0000">class</font><font color="#383838">=</font><font color="#0000ff">&quot;button&quot;</font><font color="#000000">
-</font><font color="#ff0000">onclick</font><font color="#383838">=</font><font color="#0000ff">&quot;selectPerson('Klárka',
-this)&quot;</font><font color="#383838">&gt;</font><font color="#000000">Klárka</font><font color="#383838">&lt;/</font><font color="#800000">button</font><font color="#383838">&gt;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#383838">&lt;</font><font color="#800000">button</font><font color="#000000">
-</font><font color="#ff0000">class</font><font color="#383838">=</font><font color="#0000ff">&quot;button&quot;</font><font color="#000000">
-</font><font color="#ff0000">onclick</font><font color="#383838">=</font><font color="#0000ff">&quot;selectPerson('Suzy',
-this)&quot;</font><font color="#383838">&gt;</font><font color="#000000">Suzy</font><font color="#383838">&lt;/</font><font color="#800000">button</font><font color="#383838">&gt;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#383838">&lt;</font><font color="#800000">button</font><font color="#000000">
-</font><font color="#ff0000">class</font><font color="#383838">=</font><font color="#0000ff">&quot;button&quot;</font><font color="#000000">
-</font><font color="#ff0000">onclick</font><font color="#383838">=</font><font color="#0000ff">&quot;selectPerson('Hroch',
-this)&quot;</font><font color="#383838">&gt;</font><font color="#000000">Hroch</font><font color="#383838">&lt;/</font><font color="#800000">button</font><font color="#383838">&gt;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#383838">&lt;</font><font color="#800000">button</font><font color="#000000">
-</font><font color="#ff0000">class</font><font color="#383838">=</font><font color="#0000ff">&quot;button&quot;</font><font color="#000000">
-</font><font color="#ff0000">onclick</font><font color="#383838">=</font><font color="#0000ff">&quot;selectPerson('Anet',
-this)&quot;</font><font color="#383838">&gt;</font><font color="#000000">Anet</font><font color="#383838">&lt;/</font><font color="#800000">button</font><font color="#383838">&gt;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#383838">&lt;</font><font color="#800000">button</font><font color="#000000">
-</font><font color="#ff0000">class</font><font color="#383838">=</font><font color="#0000ff">&quot;button&quot;</font><font color="#000000">
-</font><font color="#ff0000">onclick</font><font color="#383838">=</font><font color="#0000ff">&quot;selectPerson('Jurda',
-this)&quot;</font><font color="#383838">&gt;</font><font color="#000000">Jurda</font><font color="#383838">&lt;/</font><font color="#800000">button</font><font color="#383838">&gt;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#383838">&lt;/</font><font color="#800000">div</font><font color="#383838">&gt;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#383838">&lt;/</font><font color="#800000">div</font><font color="#383838">&gt;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+<body>
 
-</p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#383838">&lt;</font><font color="#800000">div</font><font color="#383838">&gt;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#383838">&lt;</font><font color="#800000">h2</font><font color="#383838">&gt;</font><font color="#000000">Co
-sis dal/a?</font><font color="#383838">&lt;/</font><font color="#800000">h2</font><font color="#383838">&gt;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#383838">&lt;</font><font color="#800000">div</font><font color="#000000">
-</font><font color="#ff0000">class</font><font color="#383838">=</font><font color="#0000ff">&quot;button-container&quot;</font><font color="#383838">&gt;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#383838">&lt;</font><font color="#800000">button</font><font color="#000000">
-</font><font color="#ff0000">class</font><font color="#383838">=</font><font color="#0000ff">&quot;button&quot;</font><font color="#000000">
-</font><font color="#ff0000">onclick</font><font color="#383838">=</font><font color="#0000ff">&quot;selectBeverage('Pivo
-0,5', this)&quot;</font><font color="#383838">&gt;</font><font color="#000000">Pivo
-0,5</font><font color="#383838">&lt;/</font><font color="#800000">button</font><font color="#383838">&gt;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#383838">&lt;</font><font color="#800000">button</font><font color="#000000">
-</font><font color="#ff0000">class</font><font color="#383838">=</font><font color="#0000ff">&quot;button&quot;</font><font color="#000000">
-</font><font color="#ff0000">onclick</font><font color="#383838">=</font><font color="#0000ff">&quot;selectBeverage('Pivo
-0,3', this)&quot;</font><font color="#383838">&gt;</font><font color="#000000">Pivo
-0,3</font><font color="#383838">&lt;/</font><font color="#800000">button</font><font color="#383838">&gt;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#383838">&lt;</font><font color="#800000">button</font><font color="#000000">
-</font><font color="#ff0000">class</font><font color="#383838">=</font><font color="#0000ff">&quot;button&quot;</font><font color="#000000">
-</font><font color="#ff0000">onclick</font><font color="#383838">=</font><font color="#0000ff">&quot;selectBeverage('Cider
-0,5', this)&quot;</font><font color="#383838">&gt;</font><font color="#000000">Cider
-0,5</font><font color="#383838">&lt;/</font><font color="#800000">button</font><font color="#383838">&gt;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#383838">&lt;</font><font color="#800000">button</font><font color="#000000">
-</font><font color="#ff0000">class</font><font color="#383838">=</font><font color="#0000ff">&quot;button&quot;</font><font color="#000000">
-</font><font color="#ff0000">onclick</font><font color="#383838">=</font><font color="#0000ff">&quot;selectBeverage('Cider
-0,3', this)&quot;</font><font color="#383838">&gt;</font><font color="#000000">Cider
-0,3</font><font color="#383838">&lt;/</font><font color="#800000">button</font><font color="#383838">&gt;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#383838">&lt;/</font><font color="#800000">div</font><font color="#383838">&gt;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#383838">&lt;/</font><font color="#800000">div</font><font color="#383838">&gt;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+<h1>Picí výkony na Líšné</h1>
 
-</p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#383838">&lt;</font><font color="#800000">button</font><font color="#000000">
-</font><font color="#ff0000">class</font><font color="#383838">=</font><font color="#0000ff">&quot;button
-big-button&quot;</font><font color="#000000">
-</font><font color="#ff0000">onclick</font><font color="#383838">=</font><font color="#0000ff">&quot;recordInscription()&quot;</font><font color="#383838">&gt;</font><font color="#000000">Zapsat
-výběr</font><font color="#383838">&lt;/</font><font color="#800000">button</font><font color="#383838">&gt;</font><font color="#000000">
-</font><font color="#008000">&lt;!-- Centered button --&gt;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><br/>
 
-</p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#383838">&lt;</font><font color="#800000">div</font><font color="#000000">
-</font><font color="#ff0000">class</font><font color="#383838">=</font><font color="#0000ff">&quot;results&quot;</font><font color="#383838">&gt;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#383838">&lt;</font><font color="#800000">h2</font><font color="#383838">&gt;</font><font color="#000000">Picí
-listina</font><font color="#383838">&lt;/</font><font color="#800000">h2</font><font color="#383838">&gt;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#383838">&lt;</font><font color="#800000">table</font><font color="#383838">&gt;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#383838">&lt;</font><font color="#800000">thead</font><font color="#383838">&gt;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#383838">&lt;</font><font color="#800000">tr</font><font color="#383838">&gt;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#383838">&lt;</font><font color="#800000">th</font><font color="#383838">&gt;</font><font color="#000000">Osoba</font><font color="#383838">&lt;/</font><font color="#800000">th</font><font color="#383838">&gt;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#383838">&lt;</font><font color="#800000">th</font><font color="#383838">&gt;</font><font color="#000000">Nápoje</font><font color="#383838">&lt;/</font><font color="#800000">th</font><font color="#383838">&gt;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#383838">&lt;/</font><font color="#800000">tr</font><font color="#383838">&gt;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#383838">&lt;/</font><font color="#800000">thead</font><font color="#383838">&gt;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#383838">&lt;</font><font color="#800000">tbody</font><font color="#000000">
-</font><font color="#ff0000">id</font><font color="#383838">=</font><font color="#0000ff">&quot;resultTableBody&quot;</font><font color="#383838">&gt;&lt;/</font><font color="#800000">tbody</font><font color="#383838">&gt;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#383838">&lt;/</font><font color="#800000">table</font><font color="#383838">&gt;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#383838">&lt;/</font><font color="#800000">div</font><font color="#383838">&gt;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><br/>
 
-</p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#383838">&lt;</font><font color="#800000">script</font><font color="#383838">&gt;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#0000ff">let</font><font color="#000000">
-selectedPerson = </font><font color="#0000ff">null</font><font color="#000000">;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#0000ff">let</font><font color="#000000">
-selectedBeverage = </font><font color="#0000ff">null</font><font color="#000000">;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+<div>
 
-</p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#0000ff">const</font><font color="#000000">
-inscriptions = {</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#a31515">'Hloža'</font><font color="#000000">:
-{},</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#a31515">'Terez'</font><font color="#000000">:
-{},</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#a31515">'Derek'</font><font color="#000000">:
-{},</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#a31515">'Zuzka
-M.'</font><font color="#000000">: {},</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#a31515">'Páca'</font><font color="#000000">:
-{},</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#a31515">'Zorka'</font><font color="#000000">:
-{},</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#a31515">'Lůca'</font><font color="#000000">:
-{},</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#a31515">'Vojta'</font><font color="#000000">:
-{},</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#a31515">'Zuzka
-B.'</font><font color="#000000">: {},</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#a31515">'Marek'</font><font color="#000000">:
-{},</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#a31515">'Barča'</font><font color="#000000">:
-{},</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#a31515">'Nikča'</font><font color="#000000">:
-{},</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#a31515">'Lenka'</font><font color="#000000">:
-{},</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#a31515">'Klárka'</font><font color="#000000">:
-{},</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#a31515">'Suzy'</font><font color="#000000">:
-{},</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#a31515">'Hroch'</font><font color="#000000">:
-{},</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#a31515">'Anet'</font><font color="#000000">:
-{},</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#a31515">'Jurda'</font><font color="#000000">:
-{}</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><font color="#000000"><span style="background: #fffffe">};</span></font></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+<h2>Vyber osobu</h2>
 
-</p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#0000ff">function</font><font color="#000000">
-loadInscriptions() {</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#0000ff">const</font><font color="#000000">
-savedInscriptions = localStorage.getItem(</font><font color="#a31515">'inscriptions'</font><font color="#000000">);</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#0000ff">if</font><font color="#000000">
-(savedInscriptions) {</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#008080">Object</font><font color="#000000">.assign(inscriptions,
-</font><font color="#008080">JSON</font><font color="#000000">.parse(savedInscriptions));</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#000000">displayResults();
-</font><font color="#008000">// Display loaded results</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><font color="#000000"><span style="background: #fffffe">}</span></font></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><font color="#000000"><span style="background: #fffffe">}</span></font></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+<div class="button-container">
 
-</p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#0000ff">function</font><font color="#000000">
-saveInscriptions() {</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#000000">localStorage.setItem(</font><font color="#a31515">'inscriptions'</font><font color="#000000">,
-</font><font color="#008080">JSON</font><font color="#000000">.stringify(inscriptions));</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><font color="#000000"><span style="background: #fffffe">}</span></font></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+<button class="button" onclick="selectPerson('Hloža', this)">Hloža</button>
 
-</p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#0000ff">function</font><font color="#000000">
-selectPerson(person, button) {</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#0000ff">const</font><font color="#000000">
-personButtons = document.querySelectorAll(</font><font color="#a31515">'div:nth-of-type(1)
-.button'</font><font color="#000000">);</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><font color="#000000"><span style="background: #fffffe">selectedPerson
-= person;</span></font></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#000000">personButtons.forEach(btn
-=&gt; btn.classList.remove(</font><font color="#a31515">'selected'</font><font color="#000000">));</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#000000">button.classList.add(</font><font color="#a31515">'selected'</font><font color="#000000">);</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><font color="#000000"><span style="background: #fffffe">}</span></font></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+<button class="button" onclick="selectPerson('Terez', this)">Terez</button>
 
-</p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#0000ff">function</font><font color="#000000">
-selectBeverage(beverage, button) {</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#0000ff">const</font><font color="#000000">
-beverageButtons = document.querySelectorAll(</font><font color="#a31515">'div:nth-of-type(2)
-.button'</font><font color="#000000">);</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><font color="#000000"><span style="background: #fffffe">selectedBeverage
-= beverage;</span></font></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#000000">beverageButtons.forEach(btn
-=&gt; btn.classList.remove(</font><font color="#a31515">'selected'</font><font color="#000000">));</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#000000">button.classList.add(</font><font color="#a31515">'selected'</font><font color="#000000">);</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><font color="#000000"><span style="background: #fffffe">}</span></font></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+<button class="button" onclick="selectPerson('Derek', this)">Derek</button>
 
-</p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#0000ff">function</font><font color="#000000">
-recordInscription() {</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#0000ff">if</font><font color="#000000">
-(!selectedPerson || !selectedBeverage) {</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#000000">alert(</font><font color="#a31515">&quot;Prosím,
-vyberte osobu a nápoj před zapsáním.&quot;</font><font color="#000000">);</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#0000ff">return</font><font color="#000000">;
-</font><font color="#008000">// Exit the function</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><font color="#000000"><span style="background: #fffffe">}</span></font></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+<button class="button" onclick="selectPerson('Zuzka M.', this)">Zuzka M.</button>
 
-</p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#0000ff">const</font><font color="#000000">
-confirmation = confirm(</font><font color="#a31515">`Jste si jisti,
-že chcete zapsat?\nOsoba: </font><font color="#000000">${selectedPerson}</font><font color="#a31515">\nNápoj:
-</font><font color="#000000">${selectedBeverage}</font><font color="#a31515">`</font><font color="#000000">);</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#0000ff">if</font><font color="#000000">
-(confirmation) {</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><font color="#008000"><span style="background: #fffffe">//
-Send data to Google Spreadsheet</span></font></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#000000">fetch(</font><font color="#a31515">'https://script.google.com/macros/s/AKfycbz7R7ziDDJ7IUxuHghDry2Wyw5XCBrHSJ3rTcuvdk26ODJqkmTa24bqtjKt5-vRNWO6JA/exec'</font><font color="#000000">,
-{</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#000000">method:
-</font><font color="#a31515">'POST'</font><font color="#000000">,</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><font color="#000000"><span style="background: #fffffe">headers:
-{</span></font></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#a31515">'Content-Type'</font><font color="#000000">:
-</font><font color="#a31515">'application/x-www-form-urlencoded'</font><font color="#000000">,</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><font color="#000000"><span style="background: #fffffe">},</span></font></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#000000">body:
-</font><font color="#0000ff">new</font><font color="#000000">
-</font><font color="#008080">URLSearchParams</font><font color="#000000">({</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><font color="#000000"><span style="background: #fffffe">person:
-selectedPerson,</span></font></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><font color="#000000"><span style="background: #fffffe">beverage:
-selectedBeverage,</span></font></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><font color="#000000"><span style="background: #fffffe">})</span></font></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><font color="#000000"><span style="background: #fffffe">})</span></font></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><font color="#000000"><span style="background: #fffffe">.then(response
-=&gt; response.text())</span></font></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><font color="#000000"><span style="background: #fffffe">.then(data
-=&gt; {</span></font></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#000000">console.log(data);
-</font><font color="#008000">// Log the response</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#0000ff">if</font><font color="#000000">
-(!inscriptions[selectedPerson][selectedBeverage]) {</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#000000">inscriptions[selectedPerson][selectedBeverage]
-= </font><font color="#098658">0</font><font color="#000000">;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><font color="#000000"><span style="background: #fffffe">}</span></font></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><font color="#000000"><span style="background: #fffffe">inscriptions[selectedPerson][selectedBeverage]++;</span></font></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#000000">saveInscriptions();
-</font><font color="#008000">// Save inscriptions</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#000000">displayResults();
-</font><font color="#008000">// Display updated results</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#000000">resetSelections();
-</font><font color="#008000">// Reset selections</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><font color="#000000"><span style="background: #fffffe">})</span></font></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#000000">.</font><font color="#0000ff">catch</font><font color="#000000">(error
-=&gt; {</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#000000">console.error(</font><font color="#a31515">'Error:'</font><font color="#000000">,
-error);</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#000000">alert(</font><font color="#a31515">&quot;Nastala
-chyba při zapisování do tabulky.&quot;</font><font color="#000000">);</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><font color="#000000"><span style="background: #fffffe">});</span></font></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><font color="#000000"><span style="background: #fffffe">}</span></font></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><font color="#000000"><span style="background: #fffffe">}</span></font></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+<button class="button" onclick="selectPerson('Páca', this)">Páca</button>
 
-</p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#0000ff">function</font><font color="#000000">
-displayResults() {</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#0000ff">const</font><font color="#000000">
-resultTableBody = document.getElementById(</font><font color="#a31515">'resultTableBody'</font><font color="#000000">);</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#000000">resultTableBody.innerHTML
-= </font><font color="#a31515">''</font><font color="#000000">; </font><font color="#008000">//
-Clear existing results</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+<button class="button" onclick="selectPerson('Zorka', this)">Zorka</button>
 
-</p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#0000ff">for</font><font color="#000000">
-(</font><font color="#0000ff">const</font><font color="#000000">
-person </font><font color="#0000ff">in</font><font color="#000000">
-inscriptions) {</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#0000ff">for</font><font color="#000000">
-(</font><font color="#0000ff">const</font><font color="#000000">
-beverage </font><font color="#0000ff">in</font><font color="#000000">
-inscriptions[person]) {</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#0000ff">const</font><font color="#000000">
-count = inscriptions[person][beverage];</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#0000ff">const</font><font color="#000000">
-row = document.createElement(</font><font color="#a31515">'tr'</font><font color="#000000">);</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#000000">row.innerHTML
-= </font><font color="#a31515">`&lt;td&gt;</font><font color="#000000">${person}</font><font color="#a31515">&lt;/td&gt;&lt;td&gt;</font><font color="#000000">${beverage}</font><font color="#a31515">
-(</font><font color="#000000">${count}</font><font color="#a31515">)&lt;/td&gt;`</font><font color="#000000">;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><font color="#000000"><span style="background: #fffffe">resultTableBody.appendChild(row);</span></font></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><font color="#000000"><span style="background: #fffffe">}</span></font></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><font color="#000000"><span style="background: #fffffe">}</span></font></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+<button class="button" onclick="selectPerson('Lůca', this)">Lůca</button>
 
-</p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#000000">document.querySelector(</font><font color="#a31515">'.results'</font><font color="#000000">).style.display
-= </font><font color="#a31515">'block'</font><font color="#000000">;
-</font><font color="#008000">// Show results section</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><font color="#000000"><span style="background: #fffffe">}</span></font></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+<button class="button" onclick="selectPerson('Vojta', this)">Vojta</button>
 
-</p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#0000ff">function</font><font color="#000000">
-resetSelections() {</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#000000">selectedPerson
-= </font><font color="#0000ff">null</font><font color="#000000">;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#000000">selectedBeverage
-= </font><font color="#0000ff">null</font><font color="#000000">;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#0000ff">const</font><font color="#000000">
-buttons = document.querySelectorAll(</font><font color="#a31515">'.button'</font><font color="#000000">);</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#000000">buttons.forEach(btn
-=&gt; btn.classList.remove(</font><font color="#a31515">'selected'</font><font color="#000000">));
-</font><font color="#008000">// Reset button states</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><font color="#000000"><span style="background: #fffffe">}</span></font></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+<button class="button" onclick="selectPerson('Zuzka B.', this)">Zuzka B.</button>
 
-</p>
-<p style="line-height: 100%; margin-bottom: 0cm"><font color="#008000"><span style="background: #fffffe">//
-Load inscriptions on page load</span></font></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><font color="#000000"><span style="background: #fffffe">window.onload
-= loadInscriptions;</span></font></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#383838">&lt;/</font><font color="#800000">script</font><font color="#383838">&gt;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#383838">&lt;/</font><font color="#800000">body</font><font color="#383838">&gt;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="background: #fffffe"><font color="#383838">&lt;/</font><font color="#800000">html</font><font color="#383838">&gt;</font></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+<button class="button" onclick="selectPerson('Marek', this)">Marek</button>
 
-</p>
-<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+<button class="button" onclick="selectPerson('Barča', this)">Barča</button>
 
-</p>
+<button class="button" onclick="selectPerson('Nikča', this)">Nikča</button>
+
+<button class="button" onclick="selectPerson('Lenka', this)">Lenka</button>
+
+<button class="button" onclick="selectPerson('Klárka', this)">Klárka</button>
+
+<button class="button" onclick="selectPerson('Suzy', this)">Suzy</button>
+
+<button class="button" onclick="selectPerson('Hroch', this)">Hroch</button>
+
+<button class="button" onclick="selectPerson('Anet', this)">Anet</button>
+
+<button class="button" onclick="selectPerson('Jurda', this)">Jurda</button>
+
+</div>
+
+</div>
+
+
+
+<div>
+
+<h2>Co sis dal/a?</h2>
+
+<div class="button-container">
+
+<button class="button" onclick="selectBeverage('Pivo 0,5', this)">Pivo 0,5</button>
+
+<button class="button" onclick="selectBeverage('Pivo 0,3', this)">Pivo 0,3</button>
+
+<button class="button" onclick="selectBeverage('Cider 0,5', this)">Cider 0,5</button>
+
+<button class="button" onclick="selectBeverage('Cider 0,3', this)">Cider 0,3</button>
+
+</div>
+
+</div>
+
+
+
+<button class="button big-button" onclick="recordInscription()">Zapsat výběr</button> <!-- Centered button -->
+
+
+
+<div class="results">
+
+<h2>Picí listina</h2>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Osoba</th>
+
+<th>Nápoje</th>
+
+</tr>
+
+</thead>
+
+<tbody id="resultTableBody"></tbody>
+
+</table>
+
+</div>
+
+
+
+<script>
+
+let selectedPerson = null;
+
+let selectedBeverage = null;
+
+
+
+const inscriptions = {
+
+'Hloža': {},
+
+'Terez': {},
+
+'Derek': {},
+
+'Zuzka M.': {},
+
+'Páca': {},
+
+'Zorka': {},
+
+'Lůca': {},
+
+'Vojta': {},
+
+'Zuzka B.': {},
+
+'Marek': {},
+
+'Barča': {},
+
+'Nikča': {},
+
+'Lenka': {},
+
+'Klárka': {},
+
+'Suzy': {},
+
+'Hroch': {},
+
+'Anet': {},
+
+'Jurda': {}
+
+};
+
+
+
+function loadInscriptions() {
+
+const savedInscriptions = localStorage.getItem('inscriptions');
+
+if (savedInscriptions) {
+
+Object.assign(inscriptions, JSON.parse(savedInscriptions));
+
+displayResults(); // Display loaded results
+
+}
+
+}
+
+
+
+function saveInscriptions() {
+
+localStorage.setItem('inscriptions', JSON.stringify(inscriptions));
+
+}
+
+
+
+function selectPerson(person, button) {
+
+const personButtons = document.querySelectorAll('div:nth-of-type(1) .button');
+
+selectedPerson = person;
+
+personButtons.forEach(btn => btn.classList.remove('selected'));
+
+button.classList.add('selected');
+
+}
+
+
+
+function selectBeverage(beverage, button) {
+
+const beverageButtons = document.querySelectorAll('div:nth-of-type(2) .button');
+
+selectedBeverage = beverage;
+
+beverageButtons.forEach(btn => btn.classList.remove('selected'));
+
+button.classList.add('selected');
+
+}
+
+
+
+function recordInscription() {
+
+if (!selectedPerson || !selectedBeverage) {
+
+alert("Prosím, vyberte osobu a nápoj před zapsáním.");
+
+return; // Exit the function
+
+}
+
+
+
+const confirmation = confirm(`Jste si jisti, že chcete zapsat?\nOsoba: ${selectedPerson}\nNápoj: ${selectedBeverage}`);
+
+if (confirmation) {
+
+// Send data to Google Spreadsheet
+
+fetch('https://script.google.com/macros/s/AKfycbz7R7ziDDJ7IUxuHghDry2Wyw5XCBrHSJ3rTcuvdk26ODJqkmTa24bqtjKt5-vRNWO6JA/exec', {
+
+method: 'POST',
+
+headers: {
+
+'Content-Type': 'application/x-www-form-urlencoded',
+
+},
+
+body: new URLSearchParams({
+
+person: selectedPerson,
+
+beverage: selectedBeverage,
+
+})
+
+})
+
+.then(response => response.text())
+
+.then(data => {
+
+console.log(data); // Log the response
+
+if (!inscriptions[selectedPerson][selectedBeverage]) {
+
+inscriptions[selectedPerson][selectedBeverage] = 0;
+
+}
+
+inscriptions[selectedPerson][selectedBeverage]++;
+
+saveInscriptions(); // Save inscriptions
+
+displayResults(); // Display updated results
+
+resetSelections(); // Reset selections
+
+})
+
+.catch(error => {
+
+console.error('Error:', error);
+
+alert("Nastala chyba při zapisování do tabulky.");
+
+});
+
+}
+
+}
+
+
+
+function displayResults() {
+
+const resultTableBody = document.getElementById('resultTableBody');
+
+resultTableBody.innerHTML = ''; // Clear existing results
+
+
+
+for (const person in inscriptions) {
+
+for (const beverage in inscriptions[person]) {
+
+const count = inscriptions[person][beverage];
+
+const row = document.createElement('tr');
+
+row.innerHTML = `<td>${person}</td><td>${beverage} (${count})</td>`;
+
+resultTableBody.appendChild(row);
+
+}
+
+}
+
+
+
+document.querySelector('.results').style.display = 'block'; // Show results section
+
+}
+
+
+
+function resetSelections() {
+
+selectedPerson = null;
+
+selectedBeverage = null;
+
+const buttons = document.querySelectorAll('.button');
+
+buttons.forEach(btn => btn.classList.remove('selected')); // Reset button states
+
+}
+
+
+
+// Load inscriptions on page load
+
+window.onload = loadInscriptions;
+
+</script>
+
 </body>
+
 </html>
+
+
+
