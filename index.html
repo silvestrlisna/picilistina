@@ -8,26 +8,30 @@
       body {
         font-family: Tahoma, sans-serif;
         font-weight: bold;
-        margin: 10px; /* Reduced margin */
+        margin: 0; /* No margin */
         padding: 10px; /* Reduced padding */
         background-color: #007bff;
         color: black;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; /* Space items evenly */
+        height: 100vh; /* Full viewport height */
       }
       h2 {
         color: black;
         text-align: center;
       }
       .button {
-        padding: 8px 12px; /* Adjusted padding */
+        padding: 10px; /* Increased padding for better touch targets */
         margin: 5px 0; /* Adjusted margin for vertical spacing */
-        font-size: 14px; /* Slightly smaller font size */
+        font-size: 4vw; /* Responsive font size */
         background-color: white;
         color: black;
         border: 2px solid #fff;
         border-radius: 5px;
         cursor: pointer;
         transition: background-color 0.3s, color 0.3s;
-        display: block; /* Made buttons block elements for single column */
+        display: block; /* Block display for single column */
         width: 100%; /* Full width for buttons */
       }
       .button.selected {
@@ -35,10 +39,15 @@
         color: white;
       }
       .big-button {
-        padding: 10px; /* Adjusted padding */
-        font-size: 14px; /* Adjusted font size */
+        padding: 12px; /* Increased padding */
+        font-size: 4vw; /* Responsive font size */
         display: block;
-        margin: 10px auto; /* Center with reduced margin */
+        margin: 10px auto; /* Centered margin */
+      }
+      .button-container {
+        flex: 1; /* Allow container to grow */
+        display: flex;
+        flex-direction: column; /* Column layout */
       }
   </style>
 </head>
