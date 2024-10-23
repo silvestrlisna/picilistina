@@ -6,237 +6,134 @@
   <title>Picí výkony na Líšné</title>
   <style>
       body {
-        font-family: Tahoma, sans-serif; /* Change to Tahoma */
-        font-weight: bold; /* Set font to bold */
+        font-family: Tahoma, sans-serif;
+        font-weight: bold;
         margin: 20px;
         padding: 20px;
-        background-color: #007bff; /* Blue background color */
-        color: black; /* Change all text color to black */
+        background-color: #007bff;
+        color: black;
       }
       h1 {
-        color: black; /* Black color for the heading */
-        text-align: center; /* Center the heading */
+        color: black;
+        text-align: center;
       }
-    .button {
-      padding: 10px 20px;
-      margin: 5px;
-      font-size: 16px; /* Larger text size for buttons */
-      background-color: white;
-      color: black; /* Keep button text black */
-      border: 2px solid #fff; /* White border for buttons */
-      border-radius: 5px; /* Slightly rounded corners */
-      cursor: pointer;
-      transition: background-color 0.3s, color 0.3s;
-      display: inline-block; /* Inline-block to help with layout */
-    }
-    .button.selected {
-      background-color: green;
-      color: white; /* White text for selected button */
-    }
-    .big-button {
-      padding: 15px 30px;
-      font-size: 16px;
-      display: block; /* Make the button a block element */
-      margin: 20px auto; /* Center the button */
-    }
-    .results {
-      display: none; /* Hide results by default */
-      margin-top: 20px;
-      border: 1px solid #ccc;
-      background-color: rgba(255, 255, 255, 0.8); /* Light background for results */
-      color: black; /* Ensure results text is black */
-      padding: 10px;
-      border-radius: 5px; /* Rounded corners for results box */
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse; /* Collapse borders for a cleaner look */
-      margin-top: 10px;
-    }
-    th, td {
-      border: 1px solid #ccc; /* Border for table cells */
-      padding: 8px; /* Padding for table cells */
-      text-align: left; /* Align text to the left */
-    }
-    th {
-      background-color: #f2f2f2; /* Light gray background for headers */
-    }
-    /* Flexbox for button layout */
-    .button-container {
-      display: flex;
-      flex-wrap: wrap; /* Allow wrapping of buttons */
-      justify-content: center; /* Center buttons */
-    }
+      .button {
+        padding: 5px 10px; /* Reduced padding for smaller buttons */
+        margin: 5px;
+        font-size: 14px; /* Reduced font size */
+        background-color: white;
+        color: black;
+        border: 2px solid #fff;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s;
+        display: inline-block;
+      }
+      .button.selected {
+        background-color: green;
+        color: white;
+      }
+      .big-button {
+        padding: 10px 20px; /* Adjusted padding for the big button */
+        font-size: 14px; /* Reduced font size */
+        display: block;
+        margin: 20px auto;
+      }
   </style>
 </head>
-  <body>
-    <h1>Picí výkony na Líšné</h1>
-    
-    <div>
-      <h2>Vyber osobu</h2>
-      <div class="button-container">
-        <button class="button" onclick="selectPerson('Hloža', this)">Hloža</button>
-        <button class="button" onclick="selectPerson('Terez', this)">Terez</button>
-        <button class="button" onclick="selectPerson('Derek', this)">Derek</button>
-        <button class="button" onclick="selectPerson('Zuzka M.', this)">Zuzka M.</button>
-        <button class="button" onclick="selectPerson('Páca', this)">Páca</button>
-        <button class="button" onclick="selectPerson('Zorka', this)">Zorka</button>
-        <button class="button" onclick="selectPerson('Lůca', this)">Lůca</button>
-        <button class="button" onclick="selectPerson('Vojta', this)">Vojta</button>
-        <button class="button" onclick="selectPerson('Zuzka B.', this)">Zuzka B.</button>
-        <button class="button" onclick="selectPerson('Marek', this)">Marek</button>
-        <button class="button" onclick="selectPerson('Barča', this)">Barča</button>
-        <button class="button" onclick="selectPerson('Nikča', this)">Nikča</button>
-        <button class="button" onclick="selectPerson('Lenka', this)">Lenka</button>
-        <button class="button" onclick="selectPerson('Klárka', this)">Klárka</button>
-        <button class="button" onclick="selectPerson('Suzy', this)">Suzy</button>
-        <button class="button" onclick="selectPerson('Hroch', this)">Hroch</button>
-        <button class="button" onclick="selectPerson('Anet', this)">Anet</button>
-        <button class="button" onclick="selectPerson('Jurda', this)">Jurda</button>
-      </div>
+<body>
+  <h1>Picí výkony na Líšné</h1>
+
+  <div>
+    <h2>Vyber osobu</h2>
+    <div class="button-container">
+      <button class="button" onclick="selectPerson('Hloža', this)">Hloža</button>
+      <button class="button" onclick="selectPerson('Terez', this)">Terez</button>
+      <button class="button" onclick="selectPerson('Derek', this)">Derek</button>
+      <button class="button" onclick="selectPerson('Zuzka M.', this)">Zuzka M.</button>
+      <button class="button" onclick="selectPerson('Páca', this)">Páca</button>
+      <button class="button" onclick="selectPerson('Zorka', this)">Zorka</button>
+      <button class="button" onclick="selectPerson('Lůca', this)">Lůca</button>
+      <button class="button" onclick="selectPerson('Vojta', this)">Vojta</button>
+      <button class="button" onclick="selectPerson('Zuzka B.', this)">Zuzka B.</button>
+      <button class="button" onclick="selectPerson('Marek', this)">Marek</button>
+      <button class="button" onclick="selectPerson('Barča', this)">Barča</button>
+      <button class="button" onclick="selectPerson('Nikča', this)">Nikča</button>
+      <button class="button" onclick="selectPerson('Lenka', this)">Lenka</button>
+      <button class="button" onclick="selectPerson('Klárka', this)">Klárka</button>
+      <button class="button" onclick="selectPerson('Suzy', this)">Suzy</button>
+      <button class="button" onclick="selectPerson('Hroch', this)">Hroch</button>
+      <button class="button" onclick="selectPerson('Anet', this)">Anet</button>
+      <button class="button" onclick="selectPerson('Jurda', this)">Jurda</button>
     </div>
-    
-    <div>
-      <h2>Co sis dal/a?</h2>
-      <div class="button-container">
-        <button class="button" onclick="selectBeverage('Pivo 0,5', this)">Pivo 0,5</button>
-        <button class="button" onclick="selectBeverage('Pivo 0,3', this)">Pivo 0,3</button>
-        <button class="button" onclick="selectBeverage('Cider 0,5', this)">Cider 0,5</button>
-        <button class="button" onclick="selectBeverage('Cider 0,3', this)">Cider 0,3</button>
-      </div>
+  </div>
+
+  <div>
+    <h2>Co sis dal/a?</h2>
+    <div class="button-container">
+      <button class="button" onclick="selectBeverage('Pivo 0,5', this)">Pivo 0,5</button>
+      <button class="button" onclick="selectBeverage('Pivo 0,3', this)">Pivo 0,3</button>
+      <button class="button" onclick="selectBeverage('Cider 0,5', this)">Cider 0,5</button>
+      <button class="button" onclick="selectBeverage('Cider 0,3', this)">Cider 0,3</button>
     </div>
-    
-    <button class="button big-button" onclick="recordInscription()">Zapsat výběr</button> <!-- Centered button -->
-    
-    <div class="results">
-      <h2>Picí listina</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Osoba</th>
-            <th>Nápoje</th>
-          </tr>
-        </thead>
-        <tbody id="resultTableBody"></tbody>
-      </table>
-    </div>
-    
-    <script>
-      let selectedPerson = null;
-      let selectedBeverage = null;
-      
-      const inscriptions = {
-        'Hloža': {},
-        'Terez': {},
-        'Derek': {},
-        'Zuzka M.': {},
-        'Páca': {},
-        'Zorka': {},
-        'Lůca': {},
-        'Vojta': {},
-        'Zuzka B.': {},
-        'Marek': {},
-        'Barča': {},
-        'Nikča': {},
-        'Lenka': {},
-        'Klárka': {},
-        'Suzy': {},
-        'Hroch': {},
-        'Anet': {},
-        'Jurda': {}
-      };
-      
-      function loadInscriptions() {
-        const savedInscriptions = localStorage.getItem('inscriptions');
-        if (savedInscriptions) {
-          Object.assign(inscriptions, JSON.parse(savedInscriptions));
-          displayResults(); // Display loaded results
-        }
+  </div>
+
+  <button class="button big-button" onclick="recordInscription()">Zapsat výběr</button>
+
+  <script>
+    let selectedPerson = null;
+    let selectedBeverage = null;
+
+    function selectPerson(person, button) {
+      const personButtons = document.querySelectorAll('div:nth-of-type(1) .button');
+      selectedPerson = person;
+      personButtons.forEach(btn => btn.classList.remove('selected'));
+      button.classList.add('selected');
+    }
+
+    function selectBeverage(beverage, button) {
+      const beverageButtons = document.querySelectorAll('div:nth-of-type(2) .button');
+      selectedBeverage = beverage;
+      beverageButtons.forEach(btn => btn.classList.remove('selected'));
+      button.classList.add('selected');
+    }
+
+    function recordInscription() {
+      if (!selectedPerson || !selectedBeverage) {
+        alert("Prosím, vyberte osobu a nápoj před zapsáním.");
+        return;
       }
-      
-      function saveInscriptions() {
-        localStorage.setItem('inscriptions', JSON.stringify(inscriptions));
-      }
-      
-      function selectPerson(person, button) {
-        const personButtons = document.querySelectorAll('div:nth-of-type(1) .button');
-        selectedPerson = person;
-        personButtons.forEach(btn => btn.classList.remove('selected'));
-        button.classList.add('selected');
-      }
-      
-      function selectBeverage(beverage, button) {
-        const beverageButtons = document.querySelectorAll('div:nth-of-type(2) .button');
-        selectedBeverage = beverage;
-        beverageButtons.forEach(btn => btn.classList.remove('selected'));
-        button.classList.add('selected');
-      }
-      
-      function recordInscription() {
-        if (!selectedPerson || !selectedBeverage) {
-          alert("Prosím, vyberte osobu a nápoj před zapsáním.");
-          return; // Exit the function
-        }
-        
-        const confirmation = confirm(`Jste si jisti, že chcete zapsat?\nOsoba: ${selectedPerson}\nNápoj: ${selectedBeverage}`);
-        if (confirmation) {
-          // Send data to Google Spreadsheet
-          fetch('https://script.google.com/macros/s/AKfycbz7R7ziDDJ7IUxuHghDry2Wyw5XCBrHSJ3rTcuvdk26ODJqkmTa24bqtjKt5-vRNWO6JA/exec', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/x-www-form-urlencoded',
-            },
-            body: new URLSearchParams({
-              person: selectedPerson,
-              beverage: selectedBeverage,
-            })
+
+      const confirmation = confirm(`Jste si jisti, že chcete zapsat?\nOsoba: ${selectedPerson}\nNápoj: ${selectedBeverage}`);
+      if (confirmation) {
+        fetch('https://script.google.com/macros/s/AKfycbz7R7ziDDJ7IUxuHghDry2Wyw5XCBrHSJ3rTcuvdk26ODJqkmTa24bqtjKt5-vRNWO6JA/exec', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+          },
+          body: new URLSearchParams({
+            person: selectedPerson,
+            beverage: selectedBeverage,
           })
-            .then(response => response.text())
-            .then(data => {
-              console.log(data); // Log the response
-              if (!inscriptions[selectedPerson][selectedBeverage]) {
-                inscriptions[selectedPerson][selectedBeverage] = 0;
-              }
-              inscriptions[selectedPerson][selectedBeverage]++;
-              saveInscriptions(); // Save inscriptions
-              displayResults(); // Display updated results
-              resetSelections(); // Reset selections
-            })
-            .catch(error => {
-              console.error('Error:', error);
-              alert("Nastala chyba při zapisování do tabulky.");
-            });
-        }
+        })
+        .then(response => response.text())
+        .then(data => {
+          console.log(data);
+          resetSelections();
+        })
+        .catch(error => {
+          console.error('Error:', error);
+          alert("Nastala chyba při zapisování do tabulky.");
+        });
       }
-      
-      function displayResults() {
-        const resultTableBody = document.getElementById('resultTableBody');
-        resultTableBody.innerHTML = ''; // Clear existing results
-        
-        for (const person in inscriptions) {
-          for (const beverage in inscriptions[person]) {
-            const count = inscriptions[person][beverage];
-            const row = document.createElement('tr');
-            row.innerHTML = `<td>${person}</td><td>${beverage} (${count})</td>`;
-            resultTableBody.appendChild(row);
-          }
-        }
-        
-        document.querySelector('.results').style.display = 'block'; // Show results section
-      }
-      
-      function resetSelections() {
-        selectedPerson = null;
-        selectedBeverage = null;
-        const buttons = document.querySelectorAll('.button');
-        buttons.forEach(btn => btn.classList.remove('selected')); // Reset button states
-      }
-      
-      // Load inscriptions on page load
-      window.onload = loadInscriptions;
-    </script>
-  </body>
+    }
+
+    function resetSelections() {
+      selectedPerson = null;
+      selectedBeverage = null;
+      const buttons = document.querySelectorAll('.button');
+      buttons.forEach(btn => btn.classList.remove('selected'));
+    }
+  </script>
+</body>
 </html>
-
-
-
