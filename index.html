@@ -20,9 +20,9 @@
         margin-top: 10px; /* Smaller margin */
       }
       .button {
-        padding: 10px; /* Increased padding */
+        padding: 8px; /* Slightly smaller padding */
         margin: 2px; /* Reduced margin */
-        font-size: 4.5vw; /* Increased font size */
+        font-size: 4vw; /* Slightly smaller font size */
         background-color: white;
         color: black;
         border: 2px solid #fff;
@@ -41,10 +41,12 @@
         margin-bottom: 10px; /* Margin below the button container */
       }
       .big-button {
-        padding: 12px; /* Increased padding for the big button */
-        font-size: 5vw; /* Increased font size for the big button */
+        padding: 12px; /* Padding for the big button */
+        font-size: 4.5vw; /* Slightly increased font size */
         display: block;
-        margin: 5px auto;
+        margin: 20px auto; /* Increased margin for more space */
+        background-color: green; /* Change button color to green */
+        color: white; /* Change text color to white */
       }
   </style>
 </head>
@@ -84,7 +86,7 @@
     </div>
   </div>
 
-  <button class="button big-button" onclick="recordInscription()">Zapsat výběr</button>
+  <button class="big-button" onclick="recordInscription()">Zapsat výběr</button>
 
   <script>
     let selectedPerson = null;
