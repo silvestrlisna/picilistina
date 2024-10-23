@@ -9,7 +9,7 @@
         font-family: Tahoma, sans-serif;
         font-weight: bold;
         margin: 0; /* No margin */
-        padding: 10px; /* Reduced padding */
+        padding: 5px; /* Reduced padding */
         background-color: #007bff;
         color: black;
         display: flex;
@@ -20,10 +20,11 @@
       h2 {
         color: black;
         text-align: center;
+        font-size: 4vw; /* Responsive font size */
       }
       .button {
-        padding: 10px; /* Increased padding for better touch targets */
-        margin: 5px 0; /* Adjusted margin for vertical spacing */
+        padding: 8px; /* Adjusted padding for smaller buttons */
+        margin: 3px 0; /* Adjusted margin for vertical spacing */
         font-size: 4vw; /* Responsive font size */
         background-color: white;
         color: black;
@@ -39,15 +40,16 @@
         color: white;
       }
       .big-button {
-        padding: 12px; /* Increased padding */
+        padding: 10px; /* Increased padding */
         font-size: 4vw; /* Responsive font size */
         display: block;
-        margin: 10px auto; /* Centered margin */
+        margin: 5px auto; /* Centered margin */
       }
       .button-container {
         flex: 1; /* Allow container to grow */
         display: flex;
         flex-direction: column; /* Column layout */
+        overflow-y: auto; /* Allow scrolling within button container if needed */
       }
   </style>
 </head>
