@@ -13,12 +13,14 @@
         background-color: #007bff;
         color: black;
       }
+
       h2 {
         color: black;
         text-align: center;
         font-size: 4vw;
         margin-top: 10px;
       }
+
       .button {
         padding: 8px;
         margin: 2px;
@@ -30,19 +32,23 @@
         cursor: pointer;
         transition: background-color 0.3s, color 0.3s;
       }
+
       .button:hover {
         background-color: #f0f0f0;
       }
+
       .button.selected {
         background-color: green;
         color: white;
       }
+
       .button-container {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 5px;
         margin-bottom: 10px;
       }
+
       .big-button {
         padding: 12px;
         font-size: 4.5vw;
@@ -51,6 +57,7 @@
         background-color: green;
         color: white;
       }
+
       .loading {
         display: none;
         text-align: center;
@@ -58,41 +65,48 @@
       }
   </style>
 </head>
+
 <body>
 
   <div>
     <h2>Vyber osobu</h2>
+
     <div class="button-container">
       <button class="button" aria-label="Select Hloža" onclick="selectPerson('Hloža', this)">Hloža</button>
       <button class="button" aria-label="Select Terez" onclick="selectPerson('Terez', this)">Terez</button>
-      <button class="button" aria-label="Select Derek" onclick="selectPerson('Derek', this)">Derek</button>
-      <button class="button" aria-label="Select Zuzka" onclick="selectPerson('Zuzka', this)">Zuzka</button>
       <button class="button" aria-label="Select Páca" onclick="selectPerson('Páca', this)">Páca</button>
       <button class="button" aria-label="Select Zorka" onclick="selectPerson('Zorka', this)">Zorka</button>
-      <button class="button" aria-label="Select Lůca" onclick="selectPerson('Lůca', this)">Lůca</button>
       <button class="button" aria-label="Select Vojta" onclick="selectPerson('Vojta', this)">Vojta</button>
-      <button class="button" aria-label="Select Srdéčko" onclick="selectPerson('Srdéčko', this)">Srdéčko</button>
+      <button class="button" aria-label="Select Zuzka" onclick="selectPerson('Zuzka', this)">Zuzka</button>
       <button class="button" aria-label="Select Marek" onclick="selectPerson('Marek', this)">Marek</button>
-      <button class="button" aria-label="Select Barča" onclick="selectPerson('Barča', this)">Barča</button>
       <button class="button" aria-label="Select Nikča" onclick="selectPerson('Nikča', this)">Nikča</button>
-      <button class="button" aria-label="Select Lenka" onclick="selectPerson('Lenka', this)">Lenka</button>
-      <button class="button" aria-label="Select Klárka" onclick="selectPerson('Klárka', this)">Klárka</button>
-      <button class="button" aria-label="Select Hroch" onclick="selectPerson('Hroch', this)">Hroch</button>
-      <button class="button" aria-label="Select Anet" onclick="selectPerson('Anet', this)">Anet</button>
-      <button class="button" aria-label="Select Jurda" onclick="selectPerson('Jurda', this)">Jurda</button>
-      <button class="button" aria-label="Select Makča" onclick="selectPerson('Makča', this)">Makča</button> 
-      <button class="button" aria-label="Select Kody" onclick="selectPerson('Kody', this)">Kody</button> 
     </div>
   </div>
 
   <div>
     <h2>Co sis dal/a?</h2>
+
     <div class="button-container">
-      <button class="button" aria-label="Select Pivo 0.5" onclick="selectBeverage('Pivo 0,5', this)">Pivo 0,5</button>
+      <button class="button" aria-label="Select Pivo 0.5" onclick="selectBeverage('Pivo 0,5', this)">
+        Pivo 0,5
+      </button>
+
+      <button class="button" aria-label="Select Pivo 0.3" onclick="selectBeverage('Pivo 0,3', this)">
+        Pivo 0,3
+      </button>
+
+      <button class="button" aria-label="Select Cider 0.5" onclick="selectBeverage('Cider 0,5', this)">
+        Cider 0,5
+      </button>
+
+      <button class="button" aria-label="Select Cider 0.3" onclick="selectBeverage('Cider 0,3', this)">
+        Cider 0,3
+      </button>
     </div>
   </div>
 
   <button class="big-button" onclick="recordInscription()">Zapsat výběr</button>
+
   <div class="loading" id="loading">Zpracovává se...</div>
 
   <script>
@@ -101,14 +115,18 @@
 
     function selectPerson(person, button) {
       const personButtons = document.querySelectorAll('div:nth-of-type(1) .button');
+
       selectedPerson = person;
+
       personButtons.forEach(btn => btn.classList.remove('selected'));
       button.classList.add('selected');
     }
 
     function selectBeverage(beverage, button) {
       const beverageButtons = document.querySelectorAll('div:nth-of-type(2) .button');
+
       selectedBeverage = beverage;
+
       beverageButtons.forEach(btn => btn.classList.remove('selected'));
       button.classList.add('selected');
     }
@@ -119,9 +137,15 @@
         return;
       }
 
-      const confirmation = confirm(`Jste si jisti, že chcete zapsat?\nOsoba: ${selectedPerson}\nNápoj: ${selectedBeverage}`);
+      const confirmation = confirm(
+        `Jste si jisti, že chcete zapsat?\n` +
+        `Osoba: ${selectedPerson}\n` +
+        `Nápoj: ${selectedBeverage}`
+      );
+
       if (confirmation) {
         document.getElementById('loading').style.display = 'block';
+
         fetch('https://script.google.com/macros/s/AKfycbz7R7ziDDJ7IUxuHghDry2Wyw5XCBrHSJ3rTcuvdk26ODJqkmTa24bqtjKt5-vRNWO6JA/exec', {
           method: 'POST',
           headers: {
@@ -151,9 +175,11 @@
     function resetSelections() {
       selectedPerson = null;
       selectedBeverage = null;
+
       const buttons = document.querySelectorAll('.button');
       buttons.forEach(btn => btn.classList.remove('selected'));
     }
   </script>
+
 </body>
 </html>
